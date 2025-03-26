@@ -1,0 +1,68 @@
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .all-\[unset\] {
+    all: unset;
+  }
+}
+
+:root {
+  --b-1-font-family: "Barlow", Helvetica;
+  --b-1-font-size: 1.25rem;
+  --b-1-font-style: normal;
+  --b-1-font-weight: 400;
+  --b-1-letter-spacing: 0px;
+  --b-1-line-height: 1.75rem;
+  --b-2-font-family: "Barlow", Helvetica;
+  --b-2-font-size: 1.125rem;
+  --b-2-font-style: normal;
+  --b-2-font-weight: 400;
+  --b-2-letter-spacing: 0px;
+  --b-2-line-height: 1.5rem;
+  --b-3-font-family: "Barlow", Helvetica;
+  --b-3-font-size: 1rem;
+  --b-3-font-style: normal;
+  --b-3-font-weight: 400;
+  --b-3-letter-spacing: 0px;
+  --b-3-line-height: 1.5rem;
+  --black: rgba(13, 12, 15, 1);
+  --button-font-family: "Barlow Semi Condensed", Helvetica;
+  --button-font-size: 1.25rem;
+  --button-font-style: normal;
+  --button-font-weight: 600;
+  --button-letter-spacing: 0px;
+  --button-line-height: normal;
+  --h1-font-family: "Times", Helvetica;
+  --h1-font-size: 4rem;
+  --h1-font-style: normal;
+  --h1-font-weight: 400;
+  --h1-letter-spacing: 0.04rem;
+  --h1-line-height: normal;
+  --h2-font-family: "Times", Helvetica;
+  --h2-font-size: 3rem;
+  --h2-font-style: normal;
+  --h2-font-weight: 400;
+  --h2-letter-spacing: 0.03rem;
+  --h2-line-height: 100%;
+  --h3-font-family: "Barlow Semi Condensed", Helvetica;
+  --h3-font-size: 2rem;
+  --h3-font-style: normal;
+  --h3-font-weight: 600;
+  --h3-letter-spacing: 0px;
+  --h3-line-height: normal;
+  --main: rgba(0, 205, 231, 1);
+  --t1-font-family: "Barlow Semi Condensed", Helvetica;
+  --t1-font-size: 1.5rem;
+  --t1-font-style: normal;
+  --t1-font-weight: 600;
+  --t1-letter-spacing: 0.036rem;
+  --t1-line-height: normal;
+  --t2-font-family: "Barlow", Helvetica;
+  --t2-font-size: 1.125rem;
+  --t2-font-style: normal;
+  --t2-font-weight: 600;
+  --t2-letter-spacing: 0px;
+  --t2-line-height: 1.5rem;
+  --variable-collection-light-gray: rgba(195, 201, 207, 1);
+}
