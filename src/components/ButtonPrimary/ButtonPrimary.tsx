@@ -5,6 +5,7 @@ interface Props {
   className: any;
   logInClassName: any;
   text: string;
+  onClick?: () => void;
 }
 
 export const ButtonPrimary = ({
@@ -12,10 +13,12 @@ export const ButtonPrimary = ({
   className,
   logInClassName,
   text,
+  onClick,
 }: Props): JSX.Element => {
   return (
     <button
-      className={`flex w-[200px] h-11 items-center justify-center gap-2.5 px-[178px] py-[11px] relative bg-main rounded-[1px] ${className} hover:bg-white cursor-pointer`}
+      className={`flex w-[200px] h-11 items-center justify-center gap-2.5 px-[178px] py-[11px] relative bg-main rounded-[1px] ${className} hover:bg-white transition-all duration-200 ease-in-out cursor-pointer`}
+      onClick={onClick}
     >
       <div
         className={`relative w-fit mt-[-2.00px] ml-[-104.50px] mr-[-104.50px] font-button font-[number:var(--button-font-weight)] text-black text-[length:var(--button-font-size)] tracking-[var(--button-letter-spacing)] leading-[var(--button-line-height)] whitespace-nowrap [font-style:var(--button-font-style)] ${logInClassName}`}
