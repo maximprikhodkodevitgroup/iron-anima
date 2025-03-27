@@ -23,10 +23,10 @@ export const ResetPassword = (): JSX.Element => {
       <AuthLayout>
         <div className="flex flex-col w-full max-w-[520px] items-center gap-10 p-4 sm:p-10 relative flex-[0_0_auto]">
           <div className="flex flex-col items-start gap-6 relative self-stretch w-full flex-[0_0_auto]">
-            <div className="relative self-stretch mt-[-1.00px] font-h3 font-[number:var(--h3-font-weight)] text-main text-[length:var(--h3-font-size)] text-center tracking-[var(--h3-letter-spacing)] leading-[var(--h3-line-height)] [font-style:var(--h3-font-style)]">
+            <h1 className="relative self-stretch mt-[-1.00px] font-h3 text-main text-[length:var(--h3-font-size)] text-center">
               SUCCESSFUL PASSWORD RESET
-            </div>
-            <p className="relative self-stretch font-b-2 font-[number:var(--b-2-font-weight)] text-white text-[length:var(--b-2-font-size)] text-center tracking-[var(--b-2-letter-spacing)] leading-[var(--b-2-line-height)] [font-style:var(--b-2-font-style)]">
+            </h1>
+            <p className="relative self-stretch font-b-2 text-white text-center">
               You can now use your new password to login to <br />
               your account
             </p>
@@ -59,17 +59,17 @@ export const ResetPassword = (): JSX.Element => {
         {({ isSubmitting }) => (
           <Form noValidate className="flex flex-col w-full max-w-[520px] items-center gap-8 p-4 sm:p-10 relative flex-[0_0_auto]">
             <div className="flex flex-col items-start gap-6 relative self-stretch w-full flex-[0_0_auto]">
-              <div className="relative self-stretch mt-[-1.00px] font-h3 font-[number:var(--h3-font-weight)] text-main text-[length:var(--h3-font-size)] text-center tracking-[var(--h3-letter-spacing)] leading-[var(--h3-line-height)] [font-style:var(--h3-font-style)]">
+              <h1 className="relative self-stretch mt-[-1.00px] font-h3 text-main text-[length:var(--h3-font-size)] text-center">
                 RESET YOUR PASSWORD
-              </div>
-              <p className="relative self-stretch font-b-2 font-[number:var(--b-2-font-weight)] text-white text-[length:var(--b-2-font-size)] text-center tracking-[var(--b-2-letter-spacing)] leading-[var(--b-2-line-height)] [font-style:var(--b-2-font-style)]">
+              </h1>
+              <p className="relative self-stretch font-b-2 text-white text-center">
                 Must be at least 8 characters.
               </p>
             </div>
-            <div className="w-full ">
+            <div className="w-full">
               <Field name="password" as={TextInput} type="password" placeholder="New Password" />
             </div>
-            <div className="w-full ">
+            <div className="w-full">
               <Field name="confirmPassword" as={TextInput} type="password" placeholder="Confirm new password" />
             </div>
             <ButtonPrimary

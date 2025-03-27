@@ -1,0 +1,1 @@
+export { IconsGoogle } from "./IconsGoogle";

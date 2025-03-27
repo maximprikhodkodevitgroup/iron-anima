@@ -4,15 +4,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        black: "var(--black)",
         main: "var(--main)",
+        white: "#FFFFFF",
+        black: "#000000",
+        grayscalegrayscale10: "var(--grayscale-grayscale-10)",
+        grayscalegrayscale70: "var(--grayscale-grayscale-70)",
       },
       fontFamily: {
         "b-1": "var(--b-1-font-family)",
-        "b-2": "var(--b-2-font-family)",
         "b-3": "var(--b-3-font-family)",
         button: "var(--button-font-family)",
-        h3: "var(--h3-font-family)",
+        poppins: "'Poppins', sans-serif",
       },
     },
   },

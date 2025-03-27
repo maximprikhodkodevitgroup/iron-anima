@@ -15,26 +15,30 @@ const SignUpSchema = Yup.object().shape({
   confirmPassword: Yup.string()
     .oneOf([Yup.ref('password')], 'Passwords must match')
     .required('Required'),
-  agreeTerms: Yup.boolean().oneOf([true], 'You must accept the terms and conditions')
+  agreeTerms: Yup.boolean()
+    .oneOf([true], 'You must accept the terms and conditions')
+    .required('You must accept the terms and conditions')
 });
 
-const CustomCheckbox = ({ field, form, ...props }) => {
+const CustomCheckbox = ({ field, form: { touched, errors }, ...props }) => {
   return (
-    <div className="flex flex-col">
-      <div className="inline-flex items-center gap-2 px-0 py-1 relative flex-[0_0_auto]">
+    <div className="flex flex-col mb-4">
+      <div className="flex items-center">
         <input
           type="checkbox"
           {...field}
           {...props}
-          className="w-6 h-6 cursor-pointer"
+          className="w-4 h-4 mr-2 cursor-pointer"
         />
-        <p className="relative w-fit mt-[-1.00px] font-b-3 font-[number:var(--b-3-font-weight)] text-white text-[length:var(--b-3-font-size)] tracking-[var(--b-3-letter-spacing)] leading-[var(--b-3-line-height)] whitespace-nowrap [font-style:var(--b-3-font-style)]">
+        <label className="font-b-3 text-white cursor-pointer">
           Agree to our Terms of use and Privacy Policy
-        </p>
+        </label>
       </div>
-      <ErrorMessage name={field.name}>
-        {msg => <div className="text-[#FF3B30] text-xs mt-1">{msg}</div>}
-      </ErrorMessage>
+      <div className="h-4 mt-1">
+        <ErrorMessage name={field.name}>
+          {msg => <div className="text-[#FF3B30] text-xs">{msg}</div>}
+        </ErrorMessage>
+      </div>
     </div>
   );
 };
@@ -56,11 +60,11 @@ export const SignUpClient = (): JSX.Element => {
         }}
       >
         {({ isSubmitting }) => (
-          <Form noValidate className="flex flex-col w-full max-w-[520px] items-center gap-[100px] p-4 sm:p-10 relative flex-[0_0_auto]">
-            <div className="flex flex-col items-start gap-6 relative self-stretch w-full flex-[0_0_auto]">
-              <div className="relative self-stretch mt-[-1.00px] font-h3 font-[number:var(--h3-font-weight)] text-main text-[length:var(--h3-font-size)] text-center tracking-[var(--h3-letter-spacing)] leading-[var(--h3-line-height)] [font-style:var(--h3-font-style)]">
+          <Form noValidate className="flex flex-col w-full max-w-[520px] items-center gap-[30px] p-4 sm:p-10 relative flex-[0_0_auto]">
+            <div className="flex flex-col items-start gap-4 relative self-stretch w-full flex-[0_0_auto]">
+              <h1 className="relative self-stretch mt-[-1.00px] font-h3 text-main text-[length:var(--h3-font-size)] text-center">
                 SIGN UP
-              </div>
+              </h1>
 
               <div className="flex flex-col sm:flex-row items-start gap-5 relative self-stretch w-full flex-[0_0_auto]">
                 <div className="w-full sm:w-1/2">
@@ -88,9 +92,9 @@ export const SignUpClient = (): JSX.Element => {
             </div>
 
             <div className="flex flex-col items-center gap-6 relative self-stretch w-full flex-[0_0_auto]">
-              <div className="relative w-fit mt-[-1.00px] font-b-2 font-[number:var(--b-2-font-weight)] text-white text-[length:var(--b-2-font-size)] tracking-[var(--b-2-letter-spacing)] leading-[var(--b-2-line-height)] whitespace-nowrap [font-style:var(--b-2-font-style)]">
+              <p className="relative w-fit mt-[-1.00px] font-b-2 text-white text-center">
                 Already have an account?
-              </div>
+              </p>
 
               <Link to="/login" className="w-full">
                 <ButtonSecondary

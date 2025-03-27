@@ -1,0 +1,1 @@
+export { IconsTwitter } from "./IconsTwitter";
